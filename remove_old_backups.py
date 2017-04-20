@@ -18,10 +18,10 @@ def remove_old_backups():
     for key in bucket.list():
         modification_date = timestring.Date(key.last_modified)
         if modification_date < month_ago:
-            key.delete_key()
+            key.delete()
             print 'file ' + key.name + ' was deleted'
         elif modification_date < week_ago and modification_date.weekday != 1:
-            key.delete_key()
+            key.delete()
             print 'file ' + key.name + ' was deleted'
         else:
             print key.name + ' keeped'
