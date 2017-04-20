@@ -10,7 +10,7 @@ aws_access_key_id=os.environ["AWS_KEY"]
 aws_secret_access_key=os.environ["AWS_SECRET"]
 list_files_log='files_list.log'
 output='rds.log'
-dbinstance_id='ademprod'
+dbinstance_id='change it'
 
 conn = boto.rds.connect_to_region(
     AWS_REGION,
